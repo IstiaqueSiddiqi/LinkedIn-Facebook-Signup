@@ -30,6 +30,9 @@
 <!-------------------------------- Linkedin Login SDK ------------------------------------------->
 <script type="text/javascript" src="//platform.linkedin.com/in.js">
     api_key:   75c20eo91xz6lm
+    onLoad:    onLinkedInLoad
+    authorize: true
+    lang:      en_US
 </script>
 
 <script type="text/javascript">
@@ -373,7 +376,7 @@
 							<a href="#"><img src="images/fb_button.png"
 								style="width: 40%;" onclick="FB.login();"></a> <a href="#"><img
 								src="images/linkedin_button.png" style="width: 40%;"></a>
-						
+						<script type="in/Login"></script>
 						</div>
 					</form>
 				</div>
@@ -553,7 +556,6 @@
 		});
 	</script>
 	
-	<script type="in/Login"></script>
 <!-- 	<div class="fb-like" data-share="true" data-width="450" -->
 <!-- 		data-show-faces="true"></div> -->
 </body>
