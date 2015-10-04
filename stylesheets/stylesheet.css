@@ -85,7 +85,7 @@ color: #FFFFFF;
 .slideShow {
 	margin-top: 50px;
 	overflow: hidden;
-	background-image: url('images/Back_img.png');
+	background-image: url('https://github.com/IstiaqueSiddiqi/portfolio/blob/gh-pages/images/Back_img.png');
 	background-repeat: no-repeat;
 	background-size: contain;
 	background-color: #F2F2F2;
