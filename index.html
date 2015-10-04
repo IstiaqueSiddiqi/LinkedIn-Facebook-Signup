@@ -56,18 +56,6 @@
     function getProfileData() {
         IN.API.Raw("/people/~").result(onSuccess).error(onError);
     }
-    
- 	// Retrieving a user profile when the user has authenticated
-    function onLinkedInAuth() {
-    	IN.API.Profile("me").result(displayProfiles);
-    }
- 	
-    function ShowProfileData(profiles) {
-        var member = profiles.values[0];
-        //use information captured above
-        document.getElementById("linkedin-status").innerHTML = 
-            "<p id=\"" + member.id + "\">Hello " +  member.firstName + " " + member.lastName + "</p>";
-    }
 
 </script>
 <!------------------------------------------------------------------------------------------------>
@@ -92,6 +80,7 @@
 </head>
 
 <body class="body">
+
 	<div class="content pure-u-1">
 		<div class="pure-g-r">
 			<div class="content pure-g-r">
@@ -520,7 +509,7 @@
 	<!-- </fb:login-button> -->
 
 <!-- 	<div id="status"></div> -->
-	<br<br<div id="linkedin-status"></div>
+
 
 	<!-------------------------------- Sign In ------------------------------------------->
 	<div id="signin" class="modal fade" role="dialog">
