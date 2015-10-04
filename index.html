@@ -58,9 +58,12 @@
         IN.API.Raw("/people/~").result(onSuccess).error(onError);
     }
     
- 	// Retrieving a user profilr when the user has authenticated
+ 	// Retrieving a user profile when the user has authenticated
     function onLinkedInAuth() {
+    	alert("sdgs"+data);
     	IN.API.Profile("me").result(displayProfiles);
+    	alert("abc"+data);
+    	
     }
  	
     function ShowProfileData(profiles) {
