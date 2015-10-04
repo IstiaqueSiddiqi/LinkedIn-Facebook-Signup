@@ -44,10 +44,6 @@
 
     // Handle the successful return from the API call
     function onSuccess(data) {
-    	alert(data);
-    	alert(Object.headline);
-    	alert(data.Object.headline);
-    	
         console.log(data);
     }
 
@@ -68,12 +64,6 @@
  	
     function ShowProfileData(profiles) {
         var member = profiles.values[0];
-//         var id=member.id;
-//         var firstName=member.firstName; 
-//         var lastName=member.lastName; 
-//         var photo=member.pictureUrl; 
-//         var headline=member.headline; 
-alert(member.firstName);
         //use information captured above
         document.getElementById("linkedin-status").innerHTML = 
             "<p id=\"" + member.id + "\">Hello " +  member.firstName + " " + member.lastName + "</p>";
@@ -102,7 +92,6 @@ alert(member.firstName);
 </head>
 
 <body class="body">
-
 	<div class="content pure-u-1">
 		<div class="pure-g-r">
 			<div class="content pure-g-r">
@@ -395,11 +384,11 @@ alert(member.firstName);
 							style="text-align: center; font-size: 16px; margin-bottom: 18px;">Or
 							connect with</h5>
 						<div class="is-center">
-<!-- 							<a href="#"><img src="images/fb_button.png" -->
-<!-- 								style="width: 40%;" onclick="FB.login();"></a> <a href="#"><img -->
-<!-- 								src="images/linkedin_button.png" style="width: 40%;"></a> -->
-						<fb:login-button scope="public_profile,email" onlogin="checkLoginState();" style="width: 40%;"></fb:login-button>
-						<script type="in/Login" style="width: 40%;"></script>
+							<a href="#"><img src="images/fb_button.png"
+								style="width: 40%;" onclick="FB.login();"></a> <a href="#"><img
+								src="images/linkedin_button.png" type="in/Login" style="width: 40%;"></a>
+<!-- 						<fb:login-button scope="public_profile,email" onlogin="checkLoginState();"></fb:login-button> -->
+<!-- 						<script type="in/Login"></script> -->
 						</div>
 					</form>
 				</div>
@@ -530,8 +519,8 @@ alert(member.firstName);
 	<!-- <fb:login-button scope="public_profile,email" onlogin="checkLoginState();"> -->
 	<!-- </fb:login-button> -->
 
-<!-- 	<div id="status"></div> -->
-	<br<br<div id="linkedin-status"></div>
+	<div id="status" style="float: left;"></div>
+	<br<br<div id="linkedin-status" style="float: right;">sgg</div>
 
 	<!-------------------------------- Sign In ------------------------------------------->
 	<div id="signin" class="modal fade" role="dialog">
