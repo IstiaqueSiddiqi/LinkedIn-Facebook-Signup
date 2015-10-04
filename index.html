@@ -56,6 +56,24 @@
     function getProfileData() {
         IN.API.Raw("/people/~").result(onSuccess).error(onError);
     }
+    
+ 	// Retrieving a user profilr when the user has authenticated
+    function onLinkedInAuth() {
+    	IN.API.Profile("me").result(displayProfiles);
+    }
+ 	
+    function ShowProfileData(profiles) {
+        var member = profiles.values[0];
+//         var id=member.id;
+//         var firstName=member.firstName; 
+//         var lastName=member.lastName; 
+//         var photo=member.pictureUrl; 
+//         var headline=member.headline; 
+
+        //use information captured above
+        document.getElementById("status").innerHTML = 
+            "<p id=\"" + member.id + "\">Hello " +  member.firstName + " " + member.lastName + "</p>";
+    }
 
 </script>
 <!------------------------------------------------------------------------------------------------>
@@ -508,7 +526,7 @@
 	<!-- <fb:login-button scope="public_profile,email" onlogin="checkLoginState();"> -->
 	<!-- </fb:login-button> -->
 
-<!-- 	<div id="status"></div> -->
+	<div id="status"></div>
 
 
 	<!-------------------------------- Sign In ------------------------------------------->
