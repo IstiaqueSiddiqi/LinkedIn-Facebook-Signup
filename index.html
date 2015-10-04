@@ -44,7 +44,8 @@
 
     // Handle the successful return from the API call
     function onSuccess(data) {
-    	alert(headline.val());
+    	var t = JSON.parse(data);
+    	alert(t['headline']);
         console.log(data);
     }
 
@@ -60,10 +61,7 @@
     
  	// Retrieving a user profile when the user has authenticated
     function onLinkedInAuth() {
-    	alert("sdgs"+data);
     	IN.API.Profile("me").result(displayProfiles);
-    	alert("abc"+data);
-    	
     }
  	
     function ShowProfileData(profiles) {
